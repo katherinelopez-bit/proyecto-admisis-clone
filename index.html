@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Admisión</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        header {
+            background-color: #1f4e79;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contenedor {
+            display: flex;
+            min-height: 90vh;
+        }
+
+        aside {
+            width: 220px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        aside h3 {
+            color: #1f4e79;
+        }
+
+        aside button {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0;
+            border: none;
+            background-color: #e8eef3;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        main {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+
+        .fila {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .campo {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .guardar {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #1f4e79;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sistema de Admisión</h1>
+    <p>Gestión de postulantes</p>
+</header>
+
+<div class="contenedor">
+
+    <aside>
+        <h3>Menú</h3>
+
+        <button>Inicio</button>
+        <button>Registrar postulante</button>
+        <button>Postulantes</button>
+        <button>Admisiones</button>
+        <button>Reportes</button>
+    </aside>
+
+    <main>
+
+        <div class="tarjeta">
+
+            <h2>Registro de Postulante</h2>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Ingrese nombre">
+                </div>
+
+                <div class="campo">
+                    <label>Apellidos</label>
+                    <input type="text" placeholder="Ingrese apellidos">
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>C.I.</label>
+                    <input type="text" placeholder="Número de carnet">
+                </div>
+
+                <div class="campo">
+                    <label>Fecha de nacimiento</label>
+                    <input type="date">
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>Correo electrónico</label>
+                    <input type="email" placeholder="correo@ejemplo.com">
+                </div>
+
+                <div class="campo">
+                    <label>Teléfono</label>
+                    <input type="text" placeholder="Número de teléfono">
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label>Carrera</label>
+
+                    <select>
+                        <option>Seleccione una carrera</option>
+                        <option>Ingeniería de Sistemas</option>
+                        <option>Contaduría Pública</option>
+                        <option>Administración</option>
+                        <option>Ingeniería Civil</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="guardar">
+                Guardar Postulante
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
