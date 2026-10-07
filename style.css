@@ -1,92 +1,213 @@
-
 body {
+
     margin: 0;
+
     font-family: "Roboto", sans-serif;
+
     background-color: #0f172a;
+
     color: #e5e7eb;
+
 }
 
 #inicio {
+
     background-color: #16243a;
+
     text-align: center;
+
     padding: 50px 20px;
+
 }
 
 #inicio h1 {
+
     margin: 0;
+
     font-size: 40px;
+
     color: #93c5fd;
+
 }
 
 #inicio p {
+
     font-size: 18px;
+
     color: #cbd5e1;
+
 }
 
 
 
 #menu {
+
     background-color: #1e3a5f;
+
     padding: 18px;
+
     text-align: center;
+
 }
 
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 nav a {
+
     color: #e2e8f0;
+
     text-decoration: none;
-    margin: 0 18px;
+
     font-size: 16px;
+
 }
 
 
 
 main {
+
     max-width: 1100px;
+
     margin: 40px auto;
+
     padding: 0 20px;
+
 }
 
 
 
 .seccion-principal,
+
 .seccion-modulos,
+
 .seccion-final {
+
     background-color: #172b46;
+
     border: 1px solid #29496d;
+
     border-radius: 8px;
+
     padding: 30px;
+
     margin-bottom: 30px;
+
 }
 
 
 
 section h3 {
+
     color: #93c5fd;
+
     font-size: 24px;
+
     margin-top: 0;
+
 }
 
 section p {
+
     color: #cbd5e1;
+
     line-height: 1.7;
+
 }
 
 
 
 .modulo {
+
     background-color: #203f63;
+
     border-left: 4px solid #60a5fa;
+
     padding: 20px;
+
     margin: 15px 0;
+
     border-radius: 5px;
+
 }
 
 .modulo h4 {
+
     color: #bfdbfe;
+
     margin-top: 0;
+
     font-size: 19px;
+
+}
+
+footer {
+    background-color:rgb(6, 6, 67) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 40px !important;
+    margin-top: 50px !important;
+}
+
+footer p {
+    color: white !important;
+    margin: 8px 0 !important;
 }
 
 
 
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    #inicio {
+        padding: 35px 15px;
+    }
+
+    #inicio h1 {
+        font-size: 30px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .seccion-principal,
+    .seccion-modulos,
+    .seccion-final {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .modulo {
+        padding: 15px;
+        margin: 12px 0;
+    }
+
+    section h3 {
+        font-size: 21px;
+    }
+
+    footer {
+        padding: 20px 15px;
+    }
+
+}
