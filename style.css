@@ -113,6 +113,16 @@ footer p {
     color: white;
     margin: 8px;
 }
+#btn-menu {
+    display: none;
+    background-color: transparent;
+    color: #e2e8f0;
+    border: 1px solid #60a5fa;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 /* RESPONSIVIDAD*/
 @media (max-width: 600px) {
@@ -184,5 +194,30 @@ footer p {
     footer {
         padding: 20px 15px;
         margin-top: 30px;
+    }
+    /*estamos agregando el menu hamburguesa*/
+       #btn-menu {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #menu ul {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 15px 0 0;
+    }
+
+    #menu ul.abierto {
+        display: block;
+    }
+
+    #menu ul li {
+        margin: 15px 0;
+    }
+
+    #menu ul li a {
+        display: block;
+        padding: 10px;
     }
 }
