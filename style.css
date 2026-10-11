@@ -195,29 +195,132 @@ footer p {
         padding: 20px 15px;
         margin-top: 30px;
     }
-    /*estamos agregando el menu hamburguesa*/
-       #btn-menu {
-        display: block;
-        margin: 0 auto;
-    }
+  
+/* Menú hamburguesa en celulares */
 
-    #menu ul {
-        display: none;
-        list-style: none;
-        padding: 0;
-        margin: 15px 0 0;
-    }
 
-    #menu ul.abierto {
-        display: block;
-    }
+/* Menú hamburguesa en celulares */
 
-    #menu ul li {
-        margin: 15px 0;
-    }
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+}
 
-    #menu ul li a {
-        display: block;
-        padding: 10px;
-    }
+#btn-menu {
+    display: block;
+    align-self: center;
+    font-size: 15px;
+    padding: 9px 16px;
+    width: auto;
+    max-width: 180px;
+}
+
+#menu ul {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 12px 0 0;
+    gap: 0;
+}
+
+#menu ul.abierto {
+    display: flex;
+}
+
+#menu ul li {
+    margin: 0;
+    text-align: center;
+}
+
+#menu ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+}
+
+}
+
+/* Aqui agregaremos el modo dia de javascript*/
+
+body.claro {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+body.claro #inicio {
+    background-color: #dbeafe;
+}
+
+body.claro #inicio h1 {
+    color: #1e40af;
+}
+
+body.claro #inicio p {
+    color: #334155;
+}
+
+body.claro #menu {
+    background-color: #bfdbfe;
+    
+}
+
+body.claro #btn-menu {
+    background-color: #ffffff;
+    color: #1e3a5f;
+    border: 1px solid #93c5fd;
+}
+
+
+body.claro nav a {
+    color: #1e3a5f;
+}
+
+body.claro nav a:hover {
+    color: #2563eb;
+}
+
+body.claro .seccion-principal,
+body.claro .seccion-modulos,
+body.claro .seccion-final,
+body.claro .seccion-contacto {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+}
+
+body.claro section h3 {
+    color: #1d4ed8;
+}
+
+body.claro section p {
+    color: #334155;
+}
+
+body.claro .modulo {
+    background-color: #eff6ff;
+    border-left-color: #3b82f6;
+}
+
+body.claro .modulo h4 {
+    color: #1e40af;
+}
+
+body.claro footer {
+    background-color: #dbeafe;
+    border-top: 1px solid #bfdbfe;
+}
+
+body.claro footer p {
+    color: #334155;
+}
+
+body.claro #btn-tema {
+    background-color: #ffffff;
+    color: #1e40af;
+    border: 1px solid #93c5fd;
 }
