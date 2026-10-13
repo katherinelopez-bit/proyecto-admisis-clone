@@ -1,23 +1,86 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lavanderia Burbujas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-      <header>
+    <header id="inicio">
         <h1>Lavanderia Burbujas</h1>
-    
-     </header>
-     <nav >
-       
+    </header>
+
+    <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Nuestros Lavados</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#lavados">Nuestros Lavados</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
-    
+
+    <main>
+        <section id="lavados">
+            <h2>Nuestros Lavados</h2>
+            <p>
+                Lavamos tus prendas con cuidado y calidad.
+                Deja tu ropa en manos de expertos y disfruta de una limpieza impecable.
+                ¡Ropa limpia, fresca y lista para lucir!
+            </p>
+
+            <ul>
+                <li>Lavado por kilo - Bs 15</li>
+                <li>Planchado de camisa - Bs 8</li>
+                <li>Lavado de edredon - Bs 35</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Deja tu encargo</h2>
+
+            <h3>Escríbenos</h3>
+            <form>
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="tu@correo.com"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="encargo">Tu encargo</label>
+                    <textarea
+                        id="encargo"
+                        name="encargo"
+                    ></textarea>
+                </div>
+            </form>
+
+            <button type="button" id="btn-confirmar">Confirmar encargo</button>
+            <p id="mensaje" class="oculto"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Parcial 1 - Katherine Lopez Ramos - 12 de octubre de 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
