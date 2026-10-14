@@ -83,7 +83,7 @@
 
                 </div>
             <h3>Escríbenos</h3>
-            <form>
+            <form id="form-contacto" novalidate>
 
                 <div class="campo">
                     <label for="nombre">Nombre completo</label>
@@ -92,6 +92,7 @@
                         id="nombre" 
                         name="nombre"
                         placeholder="Tu nombre"
+                        required
                     >
                 </div>
 
@@ -102,6 +103,7 @@
                         id="correo" 
                         name="correo"
                         placeholder="tu@correo.com"
+                        required
                     >
                 </div>
 
@@ -112,6 +114,7 @@
                         id="telefono" 
                         name="telefono"
                         placeholder="700 12345"
+                        required
                     >
                 </div>
 
@@ -123,10 +126,12 @@
                         name="mensaje"
                         placeholder="Escribe tu mensaje"
                         rows="2"
+                        
                     ></textarea> 
                 </div>
 
                     <button type="submit">Enviar mensaje</button>
+                    <p id="aviso-contacto" class="aviso"> </p>
                
 
             </form>
@@ -142,7 +147,6 @@
             <p>Solución de gestión contable para Bolivia</p>
             <p>Katherine Lopez Ramos</p>
         
-       
         
     </footer>
     <script src="script.js"></script>

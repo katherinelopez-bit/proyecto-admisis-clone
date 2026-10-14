@@ -354,3 +354,21 @@ body.claro #btn-tema {
     color: #1e40af;
     border: 1px solid #93c5fd;
 }
+/*ESTAS SON MIS VALIDACIONES DE JAVA SCRIPT*/
+.aviso{
+    display: none;
+    margin-top: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.aviso.error {
+    display: block;
+    color: #ce3d35;
+    background-color: #451a1a;
+}
+
+.aviso.exito {
+    display: block;
+    color: #0be876;
+    background-color: #143b2a;
+}
