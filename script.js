@@ -38,4 +38,33 @@ if (botonModo) {
 
     });
 }
+/*estas son mis validaciones para mi formulario */
+
+const formulario = document.querySelector("#form-contacto");
+const aviso = document.querySelector("#aviso-contacto");
+
+function revisarFormulario(event) {
+    event.preventDefault();
+
+    const nombre = document.querySelector("#nombre").value.trim();
+    const correo = document.querySelector("#correo").value.trim();
+
+    if (nombre === "") {
+        aviso.textContent = "Falta tu nombre.";
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
+
+    } else if (correo === "" || !correo.includes("@") || !correo.includes(".")) {
+        aviso.textContent = "Escribe un correo válido.";
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
+
+    } else {
+        aviso.textContent = "Formulario enviado correctamente.";
+        aviso.classList.add("exito");
+        aviso.classList.remove("error");
+    }
+}
+
+formulario.addEventListener("submit", revisarFormulario);
 
