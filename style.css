@@ -354,11 +354,10 @@ body.claro #btn-tema {
     color: #1e40af;
     border: 1px solid #93c5fd;
 }
-/*ESTAS SON MIS VALIDACIONES DE JAVA SCRIPT*/
+/*ESTAS SON MIS VALIDACIONES DE JAVA SCRIPT QUE ESTOY APLICANDO*/
 .aviso{
     display: none;
     margin-top: 14px;
-    padding: 10px;
     border-radius: 5px;
 }
 .aviso.error {
