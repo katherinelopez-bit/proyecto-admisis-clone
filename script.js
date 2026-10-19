@@ -40,6 +40,8 @@ if (botonModo) {
 }
 /*estas son mis validaciones para mi formulario */
 
+
+/* Validaciones del formulario */
 const formulario = document.querySelector("#form-contacto");
 const aviso = document.querySelector("#aviso-contacto");
 
@@ -48,23 +50,23 @@ function revisarFormulario(event) {
 
     const nombre = document.querySelector("#nombre").value.trim();
     const correo = document.querySelector("#correo").value.trim();
+    const telefono = document.querySelector("#telefono").value.trim();
+
+    aviso.classList.remove("error", "exito");
 
     if (nombre === "") {
         aviso.textContent = "Falta tu nombre.";
         aviso.classList.add("error");
-        aviso.classList.remove("exito");
-
-    } else if (correo === "" || !correo.includes("@") || !correo.includes(".")) {
-        aviso.textContent = "Escribe un correo válido.";
+    } else if (correo === "" || !correo.includes("@")) {
+        aviso.textContent = "Escribe un correo que contenga @.";
         aviso.classList.add("error");
-        aviso.classList.remove("exito");
-
+    } else if (telefono === "") {
+        aviso.textContent = "Falta tu teléfono.";
+        aviso.classList.add("error");
     } else {
-        aviso.textContent = "Formulario enviado correctamente.";
+        aviso.textContent = "Formulario validado correctamente.";
         aviso.classList.add("exito");
-        aviso.classList.remove("error");
     }
 }
 
 formulario.addEventListener("submit", revisarFormulario);
-
