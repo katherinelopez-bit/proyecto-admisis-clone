@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SALTENERIA EL HORNO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="inicio">
+        <h1>Salteneria El Horno</h1>
+        <p>Salteneria El horno les  ofrece una gran varieda de salteñas bien deliciosa y de gran calidad  para todos nuestros clientes</p>
+       
+    </header>
+
+
+            <form id="form-horno" novalidate method="POST" action="procesar.php">
+
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input 
+                        type="email" 
+                        id="correo" 
+                        name="correo"
+                        placeholder="tu@correo.com"
+                        required
+                    >
+                </div>
+
+
+                <div class="campo">
+                    <label for="pedido">Pedidos</label>
+                    <textarea 
+                        id="pedido" 
+                        name="pedido"
+                        placeholder="Escribe tu Pedido"
+                        rows="2"
+                        
+                    ></textarea> 
+                </div>
+
+                    <button type="submit">Hacer mi pedido</button>
+                   
+               
+
+            </form>
+             <p id="aviso-horno" class="aviso"> </p>
+           
+
+        </section>
+
+    </main>
+
+    <footer>
+        
+            <p>Parcial2 - Katherine Lopez Ramos -20 de Octubre de 2026 </p>
+        
+        
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
