@@ -40,7 +40,6 @@ if (botonModo) {
 }
 /*estas son mis validaciones para mi formulario */
 
-
 /* Validaciones del formulario */
 const formulario = document.querySelector("#form-contacto");
 const aviso = document.querySelector("#aviso-contacto");
@@ -57,16 +56,35 @@ function revisarFormulario(event) {
     if (nombre === "") {
         aviso.textContent = "Falta tu nombre.";
         aviso.classList.add("error");
-    } else if (correo === "" || !correo.includes("@")) {
-        aviso.textContent = "Escribe un correo que contenga @.";
-        aviso.classList.add("error");
-    } else if (telefono === "") {
-        aviso.textContent = "Falta tu teléfono.";
-        aviso.classList.add("error");
-    } else {
-        aviso.textContent = "Formulario validado correctamente.";
-        aviso.classList.add("exito");
+        return;
     }
+
+    if (!/^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ\s'-]+$/.test(nombre)) {
+        aviso.textContent = "El nombre solo debe contener letras y espacios.";
+        aviso.classList.add("error");
+        return;
+    }
+
+    if (correo === "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+        aviso.textContent = "Escribe un correo electrónico válido.";
+        aviso.classList.add("error");
+        return;
+    }
+
+    if (!/^[0-9]{7,8}$/.test(telefono.replace(/\s/g, ""))) {
+        aviso.textContent = "Escribe un teléfono de 7 u 8 dígitos.";
+        aviso.classList.add("error");
+        return;
+    }
+
+    aviso.textContent = "Formulario validado correctamente.";
+    aviso.classList.add("exito");
+
+    // Permite que el formulario se envíe a procesar.php
+    formulario.submit();
 }
 
-formulario.addEventListener("submit", revisarFormulario);
+if (formulario && aviso) {
+    formulario.addEventListener("submit", revisarFormulario);
+}
+
