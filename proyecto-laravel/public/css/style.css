@@ -1,0 +1,196 @@
+
+/* ===== ESTILOS GENERALES ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul-oscuro: #0f172a;
+    --azul: #1e3a5f;
+    --azul-claro: #93c5fd;
+    --fondo: #f1f5f9;
+    --blanco: #ffffff;
+    --texto: #334155;
+    --borde: #cbd5e1;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* ===== ENCABEZADO ===== */
+header {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 25px 6%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 4px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--azul-claro);
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    width: min(100% - 32px, 1000px);
+    margin: 40px auto;
+    min-height: 50vh;
+}
+
+section {
+    background-color: var(--blanco);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+    margin-bottom: 25px;
+}
+
+section h2 {
+    color: var(--azul);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+section h3 {
+    color: var(--azul);
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+.seccion-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+}
+
+.seccion-contacto > div {
+    padding: 10px;
+}
+
+#form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+    font: inherit;
+    background-color: var(--blanco);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: 2px solid var(--azul-claro);
+    border-color: var(--azul);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+#form-contacto button {
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    border-radius: 7px;
+    padding: 13px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#form-contacto button:hover {
+    background-color: var(--azul-oscuro);
+}
+
+.aviso {
+    margin-top: 15px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+/* ===== DISEÑO PARA CELULARES ===== */
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 8px 16px;
+    }
+
+    main {
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .seccion-contacto {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
