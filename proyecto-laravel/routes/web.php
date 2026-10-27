@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 Route::get('/inicio', function () {
@@ -25,4 +24,42 @@ Route::get('/reportes', function () {
 
 Route::get('/contacto', function () {
     return view('contacto');
+});
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::post('/login', function (Request $request) {
+    $credentials = $request->validate([
+        'email' => ['required', 'email'],
+        'password' => ['required'],
+    ]);
+
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
+
+        return redirect()->route('inicio');
+    }
+
+    return back()
+        ->withErrors([
+            'email' => 'El correo o la contraseña son incorrectos.',
+        ])
+        ->onlyInput('email');
+})->name('login.authenticate');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/inicio', function () {
+        return view('inicio');
+    })->name('inicio');
+
+    Route::post('/logout', function (Request $request) {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
+    })->name('logout');
 });
