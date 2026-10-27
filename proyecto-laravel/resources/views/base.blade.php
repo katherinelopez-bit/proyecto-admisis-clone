@@ -13,12 +13,17 @@
 <body>
 
     <header id="inicio">
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit">Cerrar sesión</button>
+        </form>
         <h1>Sistema Contable</h1>
         <p>Gestión contable para contadores</p>
 
         <button type="button" id="btn-tema" class="btn-modo">
             Modo día
         </button>
+         
     </header>
 
     <nav id="menu">
@@ -46,10 +51,6 @@
         <p>Katherine Lopez Ramos</p>
 
        
-        <form action="{{ route('logout') }}" method="POST">
-            @csrf
-            <button type="submit">Cerrar sesión</button>
-        </form>
     </footer>
 
   

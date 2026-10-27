@@ -371,3 +371,37 @@ body.claro #btn-tema {
     color: #0be876;
     background-color: #143b2a;
 }
+/* Encabezado y botón de cerrar sesión */
+header#inicio {
+    position: relative;
+}
+
+.form-logout {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    right: auto;
+    margin: 0;
+}
+
+.btn-logout {
+    padding: 10px 16px;
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-logout:hover {
+    background-color: #b91c1c;
+}
+
+.form-logout {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    right: auto;
+    margin: 0;
+}
