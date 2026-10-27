@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use App\Models\Torta;
+
+Route::redirect('/', '/login');
 
 
 Route::get('/inicio', function () {
@@ -62,4 +65,30 @@ Route::middleware('auth')->group(function () {
 
         return redirect()->route('login');
     })->name('logout');
+});
+Route::get('/tortas', function () {
+    return view('torta');
+});
+
+Route::get('/tortas/nuevo', function () {
+    return view('nuevo');
+});
+
+Route::post('/productos/nuevo', function (Request $request) {
+
+    $datos = $request->validate([
+        'nombre' => 'required',
+        'precio' => 'required|integer',
+    ], [
+        'nombre.required' => 'Debes escribir el nombre.',
+        'precio.required' => 'Debes indicar el precio.',
+        'precio.integer' => 'El precio debe ser un número entero.',
+    ]);
+
+    Torta::create([
+        'nombre' => $request->input('nombre'),
+        'precio' => $request->input('precio'),
+    ]);
+
+    return redirect('/productos');
 });
