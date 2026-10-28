@@ -85,8 +85,10 @@ Route::post('/tortas/nuevo', function (Request $request) {
         'precio' => 'required|integer',
     ], [
         'sabor.required' => 'Debes escribir el sabor.',
+        'sabor.regex' => 'El sabor solo debe contener letras y espacios.',
         'precio.required' => 'Debes indicar el precio.',
         'precio.integer' => 'El precio debe ser un número entero.',
+        'precio.min' => 'El precio no puede ser negativo.',
     ]);
 
     Torta::create($datos);
