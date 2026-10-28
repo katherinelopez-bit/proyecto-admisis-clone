@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Torta extends Model
 {
-    //
+    protected $fillable = ['sabor', 'precio'];
 }

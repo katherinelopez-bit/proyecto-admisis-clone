@@ -1,13 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>@yield('titulo','Pasteleria la Espiga')</title>
+</head>
+<body>
+    <header>
+        <h1>Pasteleria La Espiga</h1>
+    </header>
 
-@extends('base')
+    <main>
+        @yield('contenido')
 
-@section('titulo', 'Pasteleria la Espiga')
+        <section>
+            <p>
+                Presentamos nuestras mejores tortas, elaboradas con calidad
+                y dedicación, con precios accesibles para nuestros clientes.
+            </p>
+        </section>
+    </main>
 
-@section('contenido')
-    <section>
-        <h1>Pasteleria la Espiga</h1>
-        <p>
-            !Pasteleria La Espiga!! Presenta sus mejores pasteles de la mejor calidad y con una presentación impecable
-        </p>
-    </section>
-@endsection
+    <footer>
+        Integradora - Katherine Lopez Ramos - 27 de octubre de 2026
+    </footer>
+</body>
+</html>

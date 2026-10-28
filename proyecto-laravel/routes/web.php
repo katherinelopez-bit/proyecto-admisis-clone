@@ -66,29 +66,30 @@ Route::middleware('auth')->group(function () {
         return redirect()->route('login');
     })->name('logout');
 });
+
+
 Route::get('/tortas', function () {
-    return view('torta');
+    $tortas = Torta::all();
+
+    return view('tortas', compact('tortas'));
 });
 
 Route::get('/tortas/nuevo', function () {
     return view('nuevo');
 });
 
-Route::post('/productos/nuevo', function (Request $request) {
+Route::post('/tortas/nuevo', function (Request $request) {
 
     $datos = $request->validate([
-        'nombre' => 'required',
+        'sabor' => 'required',
         'precio' => 'required|integer',
     ], [
-        'nombre.required' => 'Debes escribir el nombre.',
+        'sabor.required' => 'Debes escribir el sabor.',
         'precio.required' => 'Debes indicar el precio.',
         'precio.integer' => 'El precio debe ser un número entero.',
     ]);
 
-    Torta::create([
-        'nombre' => $request->input('nombre'),
-        'precio' => $request->input('precio'),
-    ]);
+    Torta::create($datos);
 
-    return redirect('/productos');
+    return redirect('/tortas');
 });
