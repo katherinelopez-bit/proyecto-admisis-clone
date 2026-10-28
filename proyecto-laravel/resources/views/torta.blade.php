@@ -14,7 +14,7 @@
 
         <section>
             <p>
-                Presentamos nuestras mejores tortas, elaboradas con calidad
+                Hola a todos!!. Presentamos nuestras mejores tortas, elaboradas con calidad
                 y dedicación, con precios accesibles para nuestros clientes.
             </p>
         </section>
