@@ -13,7 +13,8 @@
 
                 </div>
             <h3>Escríbenos</h3>
-            <form id="form-contacto" novalidate method="POST" action="procesar.php">
+            <form id="form-contacto" novalidate method="POST" action="/contacto">
+                  @csrf
 
                 <div class="campo">
                     <label for="nombre">Nombre completo</label>
@@ -61,8 +62,20 @@
                 </div>
 
                     <button type="submit">Enviar mensaje</button>
+                    </form>
                    
-               
+               @if ($errors->any())
+    <div class="aviso error">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+@if (session('exito'))
+    <p class="aviso">{{ session('exito') }}</p>
+@endif
 
             </form>
              <p id="aviso-contacto" class="aviso"> </p>

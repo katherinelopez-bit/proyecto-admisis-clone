@@ -37,7 +37,7 @@
             <li><a href="{{ url('/modulos') }}">Módulos</a></li>
             <li><a href="{{ url('/reportes') }}">Reportes</a></li>
             <li><a href="{{ url('/contacto') }}">Contacto</a></li>
-            <li><a href="{{ url('/torta') }}">tortas</a></li>
+          
         </ul>
     </nav>
 
