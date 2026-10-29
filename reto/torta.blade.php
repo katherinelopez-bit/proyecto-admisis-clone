@@ -21,7 +21,7 @@
     </main>
 
     <footer>
-        Integradora - Katherine Lopez Ramos - 27 de octubre de 2026
+        Integradora - Katherine Lopez Ramos - 29 de octubre de 2026
     </footer>
 </body>
 </html>
